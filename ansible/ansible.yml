@@ -4,8 +4,8 @@
         - name: Build an image and push it to a private repo
           community.docker.docker_image:
               build:
-                  path: "/home/edureka/Desktop"
-              name: docker.io/salvathshaik/abctechnologies
+                  path: "https://hub.docker.com/repositories/kannan140494"
+              name: docker.io/kannan140494/newununtu
               #tag: test
               push: true
               source: build
