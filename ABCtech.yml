@@ -1,0 +1,14 @@
+---
+- hosts: ansible
+
+  tasks:
+  - name: creating docker image
+    command: docker build -t tomy:v1 .
+    args:
+     chdir: /opt/ansible
+
+  - name: creating tag on docker image
+    command: docker tag newununtu:v1 kannan140494/tomy:v1
+
+  - name: pushing on to docker hub
+    command: docker push kannan140494/newununtu:v1
